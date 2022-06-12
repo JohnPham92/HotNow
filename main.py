@@ -52,7 +52,8 @@ def create_logger() -> object:
 
 def create_driver_object() -> object:
     options = Options()
-    options.headless = True
+    options.add_argument('--headless')
+    options.add_argument('--no-sandbox')
     driver = webdriver.Chrome(options=options, service=Service(ChromeDriverManager().install()))
     return driver
 
