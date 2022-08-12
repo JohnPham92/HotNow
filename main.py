@@ -71,6 +71,7 @@ def get_page_source(driver: object, visit_url: str) -> object:
         return
     page_source = driver.page_source
     logging.info('Successfully retrieved the page')
+    driver.quit()
     return page_source
 
 
